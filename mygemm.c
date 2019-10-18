@@ -56,7 +56,7 @@ void dgemm2(const double *A, const double *B, double *C, const int n)
 			C[i * n + j] = c00;
 			C[i * n + (j + 1)] = c01;
 			C[(i + 1) * n + j] = c10;
-			C[(i + 1) * n + (j + 1) = ]c11;
+			C[(i + 1) * n + (j + 1)] = c11;
 		}
 }
 
