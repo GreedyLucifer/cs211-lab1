@@ -293,8 +293,8 @@ void optimal(const double* A, const double* B, double *C, const int n, const int
 		for (j = 0; j < n; j += b)
 			for (k = 0; k < n; k += b)
 				/* B x B mini matrix multiplications */
-				for (i1 = i; (i1 < i + b) && (i1 < n); i1+3)
-					for (j1 = j; (j1 < j + b) && (j1 < n); j1+3)
+				for (i1 = i; (i1 < i + b) && (i1 < n); i1+=3)
+					for (j1 = j; (j1 < j + b) && (j1 < n); j1+=3)
 					{
 						int c0 = i * n + j;
 						int c1 = c0 + n;
@@ -309,7 +309,7 @@ void optimal(const double* A, const double* B, double *C, const int n, const int
 						register double c21 = C[c2 + 1];
 						register double c22 = C[c2 + 2];
 
-						for (k1 = k; (k1 < k + b) && (k1 < n); k1+3)
+						for (k1 = k; (k1 < k + b) && (k1 < n); k1+=3)
 						{
 							int a0 = i * n + k;
 							int a1 = a0 + n;
